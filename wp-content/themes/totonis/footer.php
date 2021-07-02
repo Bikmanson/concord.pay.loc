@@ -73,9 +73,9 @@
                         </div>
                         <div class="b-footer-menu__list">
                             <ul>
-                                <li>
-                                    <a href="tel:<?= $contactUs['phone'] ?>"><?= $contactUs['phone'] ?></a>
-                                </li>
+                                <?php foreach ($contactUs['phone'] as $item): ?>
+                                    <li><a href="tel:<?= $item['phone_number'] ?>"><?= $item['phone_number'] ?></a></li>
+                                <?php endforeach ?>
                                 <li>
                                     <a href="mailto:<?= $contactUs['email'] ?>"><?= $contactUs['email'] ?></a>
                                 </li>
