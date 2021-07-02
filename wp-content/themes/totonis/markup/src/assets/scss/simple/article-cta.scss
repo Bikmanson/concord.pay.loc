@@ -1,0 +1,18 @@
+.b-article-cta{
+  @include flex-colm();
+  @include flex-center();
+  padding: #{$offset * 2};
+  border-radius: $radius-xs;
+  border: 1px solid map-get($colors, 'blue');
+  @include xs{
+    padding: #{$offset};
+  }
+}
+.b-article-cta__title{
+  text-align: center;
+  @include text-md;
+  font-weight: 700;
+  color: map-get($colors, 'blue');
+  margin-bottom: #{$offset};
+}
+.b-article-cta__button{}

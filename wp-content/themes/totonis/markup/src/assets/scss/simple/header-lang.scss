@@ -1,0 +1,61 @@
+.b-header-lang{
+  position: relative;
+
+  &:hover{
+    & .b-header-lang__list{
+      display: block;
+    }
+  }
+}
+.b-header-lang__current{
+  color: map-get($colors, 'blue');
+  text-decoration: underline;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  padding: 8px 0;
+  @include hover{
+    opacity: 0.75;
+    text-decoration: none;
+
+  }
+}
+.b-header-lang__list{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  padding: #{$offset / 2};
+  background-color: map-get($colors, 'white');
+  border-radius: $radius-xs;
+  animation: headerLangList 0.15s linear forwards;
+  box-shadow: 0 6px 12px -6px rgba(map-get($colors, 'black'), 0.1);
+
+  display: none;
+}
+@keyframes headerLangList {
+  0%{
+    opacity: 0;
+    transform: translate3d(-50%, 15px, 0);
+  }
+  100%{
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.b-header-lang__item{
+  padding: #{$offset / 4} #{$offset / 2};
+  display: block;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: map-get($colors, 'blue') !important;
+  @include hover{
+    opacity: 0.75;
+  }
+
+  &.active{
+    text-decoration: underline;
+  }
+}

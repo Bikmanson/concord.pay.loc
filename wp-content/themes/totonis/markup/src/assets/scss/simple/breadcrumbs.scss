@@ -1,0 +1,16 @@
+.b-breadcrumbs{
+  @include section-inner-offset;
+  padding-bottom: #{$offset * 1.5};
+  color: map-get($colors, 'green');
+  @include text-sm;
+  text-decoration: none;
+  & *{
+    @include inh;
+    text-decoration: none;
+  }
+  & a{
+    @include hover{
+      opacity: 0.75;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.b-tab-content{}
+.b-tab-content__title{
+  margin-bottom: #{$offset * 2};
+}
+.b-tab-content__main{
+  @include inner-content-style;
+  & > *{
+    &:not(img){
+      margin-bottom: #{$offset} !important;
+    }
+  }
+  & > img{
+    height: auto;
+    &:not(:last-child){
+      margin-bottom: #{$offset * 2} !important;
+    }
+  }
+
+  & ul{
+    padding-left: 16px;
+    & li{
+      list-style: auto !important;
+    }
+  }
+  & ol{
+    padding-left: 16px;
+    & li{
+      list-style: disc !important;
+      &::marker{
+        font-size: 9px;
+      }
+    }
+  }
+}

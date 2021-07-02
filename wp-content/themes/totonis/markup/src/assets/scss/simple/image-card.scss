@@ -1,0 +1,39 @@
+.b-image-card {
+  position: relative;
+}
+
+.b-image-card__image {
+  width: 100%;
+  border-radius: $radius-xs;
+  margin-bottom: #{$offset};
+  padding: #{$offset};
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 253px;
+  @include lg{
+    height: 213px;
+  }
+  @include md{
+    height: 355px;
+  }
+  @include sm{
+    height: 245px;
+  }
+  @include xs{
+    margin-bottom: #{$offset / 2};
+    padding: #{$offset / 2} #{$offset / 2} calc(100% - #{$offset / 2}) #{$offset / 2};
+  }
+}
+
+.b-image-card__badge {
+}
+
+.b-image-card__title {
+  @include title-h5;
+  font-weight: 700;
+  color: map-get($colors, 'blue');
+  @include xs{
+    text-align: center;
+  }
+}

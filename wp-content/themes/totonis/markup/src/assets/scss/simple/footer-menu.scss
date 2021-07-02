@@ -1,0 +1,31 @@
+.b-footer-menu{}
+.b-footer-menu__title{
+  @include text-sm;
+  font-weight: 700;
+  color: map-get($colors, 'green');
+  margin-bottom: #{$offset};
+}
+.b-footer-menu__list{
+  color: map-get($colors, 'white');
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.b-footer-menu__list ul{
+  list-style: none;
+  @include inh;
+}
+.b-footer-menu__list ul li{
+  list-style: none;
+  &:not(:last-child){
+    margin-bottom: #{$offset * 0.75};
+  }
+  @include inh;
+}
+.b-footer-menu__list ul li a{
+  @include inh;
+  text-decoration: none;
+  @include hover{
+    opacity: 0.75;
+  }
+}

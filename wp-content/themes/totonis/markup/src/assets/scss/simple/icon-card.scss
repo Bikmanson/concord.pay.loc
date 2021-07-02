@@ -1,0 +1,23 @@
+.b-icon-card{}
+.b-icon-card__inner{
+  @include flex-row(nowrap);
+  align-items: flex-start;
+}
+.b-icon-card__icon{
+  width: 60px;
+  margin-top: -10px;
+  margin-right: #{$offset};
+}
+.b-icon-card__main{
+  width: calc(100% - 60px - #{$offset});
+}
+.b-icon-card__title{
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-bottom: #{$offset};
+}
+.b-icon-card__description{
+  @include text-sm;
+  @include inner-content-style;
+}

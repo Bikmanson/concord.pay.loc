@@ -1,0 +1,21 @@
+.b-article-cta-section {
+  @include section-inner-offset;
+}
+
+.b-article-cta-section__inner {
+  @include flex-colm();
+  @include flex-center();
+}
+
+.b-article-cta-section__title {
+  margin-bottom: #{$offset * 3};
+  @include md {
+    margin-bottom: #{$offset * 2};
+  }
+  @include md {
+    margin-bottom: #{$offset};
+  }
+}
+
+.b-article-cta-section__button {
+}

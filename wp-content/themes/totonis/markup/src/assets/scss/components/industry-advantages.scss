@@ -1,0 +1,37 @@
+.b-industry-advantages {
+  @include section-inner-offset;
+}
+
+.b-industry-advantages__inner {
+}
+.b-industry-advantages__title{
+  text-align: center;
+  margin-bottom: #{$offset * 4};
+  @include sm{
+    margin-bottom: #{$offset * 2};
+  }
+  &_industry{
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.b-industry-advantages__list{
+  @include xs{
+    display: none;
+  }
+}
+.b-industry-advantages__slider{
+  display: none;
+  @include xs{
+    display: block;
+    width: 100vw;
+    margin-left: calc((100vw - 420px + #{$offset * 2})/-2);
+  }
+  @media (max-width: 420px){
+    margin-left: #{$offset * -1};
+  }
+  & .b-slider__item{
+    padding: 0 #{$offset};
+  }
+}

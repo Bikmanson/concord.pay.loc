@@ -1,0 +1,24 @@
+.b-industry-cta{
+  @include section-inner-offset;
+}
+.b-industry-cta__title{
+  &:not(:last-child){
+    margin-bottom: #{$offset * 2};
+  }
+}
+.b-industry-cta__buttons{
+
+  @include flex-row;
+  @include flex-center;
+  width: calc(100% + #{$offset});
+  margin: #{$offset / -2};
+  &:not(:last-child){
+    margin-bottom: #{$offset * 2};
+  }
+}
+.b-industry-cta__button{
+  margin: #{$offset / 2};
+  @include xs{
+    width: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+.b-home-cover{
+  @include section-inner-offset;
+}
+.b-home-cover__inner{}
+.b-home-cover__row{}
+.b-home-cover__col{}
+.b-home-cover__title{
+  margin-bottom: #{$offset * 2};
+}
+.b-home-cover__marker-list{
+  margin-bottom: #{$offset * 2};
+}
+.b-hover-cover__button{
+  padding-left: #{$offset * 2};
+  padding-right: #{$offset * 2};
+  @include xs{
+    width: 100%;
+  }
+}

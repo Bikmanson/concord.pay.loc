@@ -1,0 +1,29 @@
+.b-best-tariff{
+  @include section-inner-offset;
+  padding-bottom: 0 !important;
+}
+.b-best-tariff__inner{}
+.b-best-tariff__row{}
+.b-best-tariff__col{}
+.b-best-tariff__title{
+  margin-bottom: #{$offset * 4};
+  @include lg{
+    margin-bottom: #{$offset * 3};
+  }
+  @include sm{
+    margin-bottom: #{$offset * 2};
+  }
+  @include xs{
+    margin-bottom: #{$offset * 1};
+  }
+}
+.b-best-tariff__col_md-first{
+  @include md{
+    order: -1;
+    @include flex-colm();
+    @include flex-center();
+    margin-bottom: #{$offset};
+    text-align: center;
+  }
+}
+.b-best-tariff__button{}

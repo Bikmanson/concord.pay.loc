@@ -1,0 +1,47 @@
+.b-marker-list{}
+.b-marker-list ul{
+  @include inh;
+  list-style: none;
+}
+.b-marker-list ul li{
+  list-style: none;
+  padding-left: #{$offset * 1.75};
+  position: relative;
+  @include inh;
+  &:not(:last-child){
+    margin-bottom: #{$offset / 2};
+  }
+  @include md{
+    padding-left: #{$offset * 1.7};
+  }
+  @include sm{
+    padding-left: #{$offset * 1.4};
+  }
+  @include xs{
+    padding-left: #{$offset * 1.2};
+  }
+
+  &:before{
+    content: '';
+    background-image: url('../../assets/icon/check-circle.svg');
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 2px;
+    left: 0;
+    background-size: contain;
+    @include  md{
+      width: 22px;
+      height: 22px;
+    }
+    @include  sm{
+      top: 4px;
+      width: 19px;
+      height: 19px;
+    }
+    @include  xs{
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

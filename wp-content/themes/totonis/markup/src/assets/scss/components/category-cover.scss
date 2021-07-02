@@ -1,0 +1,8 @@
+.b-category{
+  @include section-inner-offset;
+  padding-top: 0;
+}
+.b-category__inner{}
+.b-category__title{
+  margin-bottom: #{$offset * 2};
+}

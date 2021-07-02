@@ -1,0 +1,23 @@
+.b-advantages {
+  @include section-inner-offset;
+}
+
+.b-advantages__inner {
+}
+.b-advantages__title{
+  text-align: center;
+  margin-bottom: #{$offset * 4};
+  @include sm{
+    margin-bottom: #{$offset * 2};
+  }
+  &_industry{
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.b-advantages__col{
+  @include sm{
+    margin-bottom: #{$offset};
+  }
+}

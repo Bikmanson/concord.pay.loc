@@ -1,0 +1,67 @@
+.b-slider{
+  position: relative;
+}
+.b-slider__inner{
+  padding-left: #{$offset * 1.5};
+  padding-right: #{$offset * 1.5};
+}
+.b-slider__list{
+  width: 100%;
+}
+.b-slider__arrow{
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 60px;
+  @include flex-row();
+  @include flex-center();
+  background-color: map-get($colors, 'green');
+  transform: translate3d(0, -50%, 0);
+  & svg{
+    width: 10px;
+    height: 16px;
+    transition: $t;
+  }
+}
+.b-slider__arrow_prev{
+  left: 0;
+  @include hover{
+    & svg{
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+}
+.b-slider__arrow_next{
+  right: 0;
+  @include hover{
+    & svg{
+      transform: translate3d(50%, 0, 0);
+    }
+  }
+}
+.b-slider__list .slick-list{
+  margin-bottom: #{$offset * 1.5};
+}
+.b-slider__list .slick-dots{
+  padding: #{$offset / 2};
+  list-style: none;
+  @include flex-row();
+  @include flex-center();
+  width: calc(100% + #{$offset / 1.5});
+  margin: #{$offset / -3};
+}
+
+.b-slider__list .slick-dots li{
+  list-style: none;
+  width: 14px;
+  height: 14px;
+  background-color: map-get($colors, 'blue');
+  border-radius: $radius-xs;
+  margin: #{$offset / 3};
+  &.slick-active{
+    background-color: map-get($colors, 'green');
+  }
+}
+.b-slider__list .slick-dots li button{
+  display: none;
+}

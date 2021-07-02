@@ -1,0 +1,55 @@
+.b-gray-card{
+  background-color: map-get($colors, 'light');
+  border-radius: $radius-xs;
+  height: 100%;
+}
+.b-gray-card__inner{
+  padding: #{$offset * 1.5};
+  & > *{
+    &:not(:last-child){
+      margin-bottom: #{$offset};
+    }
+  }
+}
+.b-gray-card__icons{
+}
+.b-gray-card__icons-row{
+  @include row;
+  @include flex-center;
+}
+.b-gray-card__icon{
+  padding: #{$offset};
+  @include  sm{
+    padding: #{$offset / 2};
+  }
+  & svg{
+    display: block;
+  }
+}
+.b-gray-card__title{
+  font-weight: 700;
+}
+.b-gray-card__description{
+  @include inner-content-style;
+  &:not(:last-child){
+    margin-bottom: #{$offset * 2};
+    @include sm{
+      margin-bottom: #{$offset};
+    }
+  }
+}
+.b-gray-card__logos{
+  @include row;
+  justify-content: center;
+}
+.b-gray-card__logo{
+  padding: #{$offset};
+  display: inline-flex;
+  @include flex-center();
+  & img{
+    display: block;
+  }
+  @include xs{
+    width: 100%;
+  }
+}

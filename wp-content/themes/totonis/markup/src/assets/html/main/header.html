@@ -1,0 +1,79 @@
+<header class="b-header">
+    <div class="b-header__container">
+        <div class="b-header__inner">
+            <a href="./" class="b-header__logo">
+                <img src="./assets/img/logo.svg" alt="Concord pay logo">
+            </a>
+            <div class="b-header-menu b-header__menu">
+                @@include("./menu.html")
+            </div>
+            <div class="b-header__buttons">
+                <div class="b-button b-button_xs b-button_blue b-header__button">Підключити</div>
+                <div class="b-button b-button_xs b-button_blue-outline b-header__button">Вхід</div>
+            </div>
+            <div class="b-header-lang b-header__lang">
+                <div class="b-header-lang__current">UA</div>
+                <div class="b-header-lang__list">
+                    <a href="#ru" class="b-header-lang__item">RU</a>
+                    <a href="#ua" class="b-header-lang__item active">UA</a>
+                </div>
+            </div>
+            <div class="b-header__mobile-menu-trigger" data-mobile-menu-trigger>
+               @@include("../../icon/menu.svg")
+               @@include("../../icon/close.svg")
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="b-mobile-menu" data-mobile-menu-content>
+    <div class="b-mobile-menu__inner">
+        <div class="b-mobile-menu__main">
+            <div class="b-mobile-menu__list">
+                <ul>
+                    <li>
+                        <a href="#">Можливості</a>
+                    </li>
+                    <li>
+                        <a href="#">Рішення для бізнесу</a>
+                        <i></i>
+                        <ul>
+                            <li>
+                                <a href="#">Для интернет-магазинов</a>
+                            </li>
+                            <li>
+                                <a href="#">Для мобильных приложений</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Модулі для CMS</a>
+                        <i></i>
+                        <ul>
+                            <li>
+                                <a href="#">Для интернет-магазинов</a>
+                            </li>
+                            <li>
+                                <a href="#">Для мобильных приложений</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">API</a>
+                    </li>
+                    <li>
+                        <a href="#">Блог</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакти</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="b-mobile-menu__footer">
+            <div class="b-button b-button_blue b-button_xs b-mobile-menu__button">
+                Підключити
+            </div>
+        </div>
+    </div>
+</div>

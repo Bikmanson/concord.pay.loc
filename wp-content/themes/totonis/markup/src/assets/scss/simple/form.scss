@@ -1,0 +1,14 @@
+.b-form {
+}
+
+.b-form__row {
+  margin: #{$offset / -2};
+  width: calc(100% + #{$offset});
+}
+
+.b-form__col {
+  padding: #{$offset / 2};
+}
+
+.b-form__title {
+}

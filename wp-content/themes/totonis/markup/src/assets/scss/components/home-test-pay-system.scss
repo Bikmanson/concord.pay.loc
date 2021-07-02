@@ -1,0 +1,62 @@
+.b-test-pay-system {
+  @include section-inner-offset;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 180px;
+    height: 100%;
+    background-color: inherit;
+    @media (max-width: 1440px){
+      width: calc((100vw - 100%) / 2);
+    }
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 180px;
+    height: 100%;
+    background-color: inherit;
+    @media (max-width: 1440px){
+      width: calc((100vw - 100%) / 2);
+    }
+  }
+}
+.b-test-pay-system__background-image{
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  right: calc(100% + 30px);
+  @include sm{
+    display: none;
+  }
+}
+
+.b-test-pay-system__inner {
+}
+
+.b-test-pay-system__title {
+  text-align: center;
+  margin-bottom: #{$offset * 2};
+}
+.b-test-pay-system__description{
+  text-align: center;
+  margin-bottom: #{$offset * 4};
+  @include xs{
+    margin-bottom: #{$offset * 2};
+  }
+  @include inner-content-style;
+}
+.b-test-pay-system__buttons{
+  @include flex-row();
+  @include flex-center();
+}
+.b-test-pay-system__button{
+  @include xs{
+    width: 100%;
+  }
+}

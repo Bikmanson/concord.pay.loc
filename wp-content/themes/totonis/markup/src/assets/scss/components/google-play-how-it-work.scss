@@ -1,0 +1,8 @@
+.b-gp-how-it-work{
+  @include section-inner-offset;
+}
+.b-gp-how-it-work__inner{}
+.b-gp-how-it-work__title{
+  text-align: center;
+  margin-bottom: #{$offset * 2};
+}

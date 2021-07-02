@@ -1,0 +1,292 @@
+// relative positions end
+[data-fancybox] {
+    cursor: zoom-in;
+}
+
+.alignleft{
+    float: left;
+    margin-right: #{$offset};
+}
+.aligncenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alignright{
+    float: right;
+    margin-left: #{$offset};
+}
+//
+//.b-text-xs,
+//[class*="_text-xs"]{
+//    @include text-xs();
+//}
+.b-text-sm,
+[class*="_text-sm"]{
+    @include text-sm();
+}
+.b-text-md,
+[class*="_text-md"]{
+    @include text-md();
+}
+.b-title-h1,
+[class*="_text-h1"]{
+    @include title-h1();
+}
+.b-title-h2,
+[class*="_text-h2"]{
+    @include title-h2();
+}
+.b-title-h3,
+[class*="_text-h3"]{
+    @include title-h3();
+}
+.b-title-h4,
+[class*="_text-h4"]{
+    @include title-h4();
+}
+.b-title-h5,
+[class*="_text-h5"]{
+    @include title-h5();
+}
+.b-title-h6,
+[class*="_text-h6"]{
+    @include title-h6();
+}
+
+
+/* ------ colors ------ */
+
+// text
+@each $key, $value in $colors {
+    [class*="_c-#{$key}"] {
+        color: $value;
+        @if $key == 'blue' {
+            & a:not([class]){
+                color: map-get($colors, 'green');
+                text-decoration: underline;
+                font-weight: 700;
+            }
+        }
+        @if $key == 'green' {
+            & a:not([class]){
+                color: map-get($colors, 'blue');
+                text-decoration: underline;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+// background
+@each $key, $value in $colors {
+    [class*="_bgc-#{$key}"] {
+        background-color: $value;
+    }
+}
+
+// border
+@each $key, $value in $colors {
+    [class*="_bc-#{$key}"] {
+        border-color: $value;
+    }
+}
+
+
+/* ------ colors end ------ */
+
+
+/* ------ grid ------ */
+
+[class*="__container"] {
+    @include wrapper;
+}
+
+[class*="__row"] {
+    @include row;
+}
+
+// cols
+.b-col{}
+// default
+@for $i from 1 through $cols {
+    .b-col_#{$i}{
+        @include col($i);
+    }
+}
+// xl
+@for $i from 1 through $cols {
+    .b-col_xl-#{$i}{
+        @include col-xl($i);
+    }
+}
+// lg
+@for $i from 1 through $cols {
+    .b-col_lg-#{$i}{
+        @include col-lg($i);
+    }
+}
+// md
+@for $i from 1 through $cols {
+    .b-col_md-#{$i}{
+        @include col-md($i);
+    }
+}
+// sm
+@for $i from 1 through $cols {
+    .b-col_sm-#{$i}{
+        @include col-sm($i);
+    }
+}
+// xs
+@for $i from 1 through $cols {
+    .b-col_xs-#{$i}{
+        @include col-xs($i);
+    }
+}
+/* ------ grid end ------ */
+
+// flex settings
+[class*="_w-100"] {
+    width: 100%;
+}
+
+[class*="_fd-row"] {
+    flex-direction: row;
+}
+[class*="_fd-row-reverse"] {
+    flex-direction: row-reverse;
+}
+[class*="_fd-column"] {
+    flex-direction: column;
+}
+[class*="_fd-column-reverse"] {
+    flex-direction: column-reverse;
+}
+
+[class*="_ai-center"] {
+    align-items: center;
+}
+
+[class*="_ai-end"] {
+    align-items: flex-end;
+}
+
+[class*="_ai-start"] {
+    align-items: flex-start;
+}
+
+[class*="_ai-baseline"] {
+    align-items: baseline;
+}
+
+[class*="_jc-center"] {
+    justify-content: center;
+}
+
+[class*="_jc-end"] {
+    justify-content: flex-end;
+}
+
+[class*="_jc-start"] {
+    justify-content: flex-start;
+}
+
+[class*="_jc-between"] {
+    justify-content: space-between;
+}
+
+[class*="_jc-around"] {
+    justify-content: space-around;
+}
+
+[class*="_jc-evenly"] {
+    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+[class*="_fw-wrap"] {
+    flex-wrap: wrap;
+}
+
+[class*="_fw-nowrap"] {
+    flex-wrap: nowrap;
+}
+
+// displays
+// flex
+@each $d in $dislplays{
+    [class*="_d-#{$d}"]{
+        display: #{$d};
+    }
+    [class*="_d-xl-#{$d}"]{
+        @include xl{
+            display: #{$d};
+        }
+    }
+    [class*="_d-lg-#{$d}"]{
+        @include lg{
+            display: #{$d};
+        }
+    }
+    [class*="_d-md-#{$d}"]{
+        @include md{
+            display: #{$d};
+        }
+    }
+    [class*="_d-sm-#{$d}"]{
+        @include sm{
+            display: #{$d};
+        }
+    }
+    [class*="_d-xs-#{$d}"]{
+        @include xs{
+            display: #{$d};
+        }
+    }
+}
+
+[class*="_o-hidden"] {
+    overflow: hidden;
+}
+
+// text align
+[class*="_ta-center"] {
+    text-align: center;
+}
+
+[class*="_ta-left"] {
+    text-align: left;
+}
+
+[class*="_ta-right"] {
+    text-align: right;
+}
+
+[class*="_fw-100"]{
+    font-weight: 100;
+}
+[class*="_fw-200"]{
+    font-weight: 200;
+}
+[class*="_fw-300"]{
+    font-weight: 300;
+}
+[class*="_fw-400"]{
+    font-weight: 400;
+}
+[class*="_fw-500"]{
+    font-weight: 500;
+}
+[class*="_fw-600"]{
+    font-weight: 600;
+}
+[class*="_fw-700"]{
+    font-weight: 700;
+}
+[class*="_fw-800"]{
+    font-weight: 800;
+}
+[class*="_fw-900"]{
+    font-weight: 900;
+}

@@ -1,0 +1,18 @@
+.b-block-preview {
+    border: 1px solid #1e50e5;
+    padding: 10px;
+}
+
+.b-block-preview__title {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.b-block-preview__description
+{
+    font-size: 0.8em;
+    color: grey;
+    text-align: left;
+}

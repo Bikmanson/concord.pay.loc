@@ -1,0 +1,106 @@
+.b-group-slider {
+  position: relative;
+}
+
+.b-group-slider__list {
+}
+
+.b-group-slider__item {
+}
+
+.b-group-slider__arrow {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: calc(100% - 20px - 14px);
+  transform: scale(0.7);
+  &:before{
+    content: '';
+    position: absolute;
+    top: calc(50% - 2px);
+    height: 4px;
+    width: 22px;
+    left: calc(50% - 14px);
+    background-color: map-get($colors, 'green');
+  }
+  &.slick-disabled{
+    &:before{
+      background-color: #e6e6e6;
+    }
+  }
+}
+
+.b-group-slider__arrow_prev {
+  right: calc(50% + 100px);
+  &:after{
+    content: '';
+    position: absolute;
+    top: calc(50%);
+    height: 15px;
+    width: 15px;
+    left: 2px;
+    background-color: transparent;
+    transform-origin: top left;
+    transform: rotate(-45deg);
+    border-top: 4px solid map-get($colors, 'green');
+    border-left: 4px solid map-get($colors, 'green');
+  }
+  &.slick-disabled{
+    &:after{
+      border-top: 4px solid #e6e6e6;
+      border-left: 4px solid #e6e6e6;
+    }
+  }
+}
+
+.b-group-slider__arrow_next {
+  left: calc(50% + 100px);
+  &:after{
+    content: '';
+    position: absolute;
+    top: calc(50%);
+    height: 15px;
+    width: 15px;
+    right: 2px;
+    background-color: transparent;
+    transform-origin: top right;
+    transform: rotate(45deg);
+    border-top: 4px solid map-get($colors, 'green');
+    border-right: 4px solid map-get($colors, 'green');
+  }
+  &:before{
+    left: calc(50% - 8px);
+  }
+  &.slick-disabled{
+    &:after{
+      border-top: 4px solid #e6e6e6;
+      border-right: 4px solid #e6e6e6;
+    }
+  }
+}
+
+.b-group-slider{
+  & .slick-dots{
+    @include flex-row();
+    @include flex-center();
+
+    & li{
+      cursor: pointer;
+      list-style: none;
+      width: 8px;
+      height: 8px;
+      border-radius: $radius-round;
+      background-color: #e6e6e6;
+      margin: #{$offset / 2};
+
+      &.slick-active{
+        background-color: map-get($colors, 'green');
+      }
+
+      & button{
+        display: none;
+      }
+    }
+  }
+}

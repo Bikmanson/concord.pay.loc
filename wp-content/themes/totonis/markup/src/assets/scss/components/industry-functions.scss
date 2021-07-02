@@ -1,0 +1,31 @@
+.b-industry-functions {
+  @include section-inner-offset;
+}
+
+.b-industry-functions__title {
+  &:not(:last-child) {
+    margin-bottom: #{$offset * 2};
+  }
+}
+
+.b-industry-functions__list {
+  &:not(:last-child) {
+    margin-bottom: #{$offset * 2};
+  }
+
+  @include xs {
+    display: none;
+  }
+}
+
+.b-industry-functions__slider {
+  display: none;
+  @include xs {
+    display: block;
+    width: 100vw;
+    margin-left: calc((100vw - 420px + 40px) / -2);
+  }
+  @media (max-width: 420px) {
+    margin-left: #{$offset * -1};
+  }
+}

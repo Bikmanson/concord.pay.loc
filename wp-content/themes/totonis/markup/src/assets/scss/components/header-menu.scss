@@ -1,0 +1,85 @@
+.b-header-menu {}
+
+//first level menu
+.b-header-menu > ul {
+  @include flex-row;
+  list-style: none;
+  padding: 0;
+  margin: -15px;
+}
+
+.b-header-menu > ul > li {
+  list-style: none;
+  position: relative;
+  &.active{
+    font-weight: 900;
+    & > a,
+    & > span{
+      font-weight: inherit;
+    }
+  }
+}
+
+.b-header-menu > ul > li > a,
+.b-header-menu > ul > li > span{
+  padding: 15px 10px;
+  display: block;
+  color: map-get($colors, 'blue');
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.4;
+  @include hover {
+    opacity: 0.75;
+  }
+}
+
+//second level menu
+.b-header-menu > ul > li:hover{
+  & > ul{
+    display: block;
+  }
+}
+.b-header-menu > ul > li > ul{
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  padding: #{$offset / 2};
+  background-color: map-get($colors, 'white');
+  border-radius: $radius-xs;
+  animation: submenuList 0.15s linear forwards;
+  box-shadow: 0 6px 12px -6px rgba(map-get($colors, 'black'), 0.1);
+}
+@keyframes submenuList {
+  0%{
+    opacity: 0;
+    transform: translate3d(-50%, 15px, 0);
+  }
+  100%{
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.b-header-menu > ul > li > ul > li{
+  padding: #{$offset / 4} #{$offset / 2};
+  display: block;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: map-get($colors, 'blue') !important;
+  @include hover{
+    opacity: 0.75;
+  }
+
+  &.active{
+    text-decoration: underline;
+  }
+}
+.b-header-menu > ul > li > ul > li > a{
+  text-decoration: none;
+  white-space: nowrap;
+}

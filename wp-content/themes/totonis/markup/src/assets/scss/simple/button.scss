@@ -1,0 +1,49 @@
+.b-button{
+  display: inline-flex;
+  user-select: none;
+  @include flex-center();
+  text-align: center;
+  border-radius: $radius-xs;
+  border-width: 1px;
+  border-style: solid;
+  text-decoration: none;
+  outline: none;
+  @include hover{
+    opacity: 0.75;
+  }
+}
+.b-button_blue{
+  color: #f5f3f3 !important;
+  background-color: map-get($colors, 'blue') !important;
+  border-color: map-get($colors, 'blue') !important;
+}
+.b-button_blue-outline{
+  border-color: map-get($colors, 'blue') !important;
+  background-color: transparent !important;
+  color: map-get($colors, 'blue') !important;
+}
+.b-button_green{
+  color: #f5f3f3 !important;
+  border-color: map-get($colors, 'green') !important;
+  background-color: map-get($colors, 'green') !important;
+}
+.b-button_green-outline{
+  background-color: transparent !important;
+  color: map-get($colors, 'green') !important;
+  border-color: map-get($colors, 'green') !important;
+}
+.b-button_xs{
+  padding: 10px 15px;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.b-button_sm{
+  padding: 12px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+  @include xs{
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,42 @@
+.b-quote {
+  padding: #{$offset} 80px;
+  background-color: map-get($colors, 'light');
+  border-radius: $radius-xs;
+  color: map-get($colors, 'green');
+  @include text-md;
+  font-weight: 700;
+  position: relative;
+
+  @include xs{
+    padding: #{$offset};
+  }
+
+  &:before {
+    content: "\00ab";
+    font-size: 80px;
+    position: absolute;
+    top: #{$offset};
+    left: #{$offset};
+    line-height: 20px;
+
+    @include xs{
+      font-size: 46px;
+      left: #{$offset / -1.5};
+    }
+  }
+
+  &:after {
+    content: "\00bb";
+    font-size: 80px;
+    position: absolute;
+    bottom: #{$offset * 2};
+    right: #{$offset};
+    line-height: 20px;
+
+    @include xs{
+      font-size: 46px;
+      right: #{$offset / -1.5};
+      bottom: #{$offset * 1.5};
+    }
+  }
+}

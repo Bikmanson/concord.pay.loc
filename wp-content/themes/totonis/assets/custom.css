@@ -1,0 +1,23 @@
+.b-image-card__title, .b-image-card__title:visited {
+    text-decoration: none;
+    color: #0039d1;
+}
+
+.b-image-card-full__title, .b-image-card-full__title:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.b-badge a {
+    text-decoration: none;
+    color: white;
+}
+
+.b-text-card__trigger, .b-text-card__trigger:visited {
+    color: #00c67a;
+}
+
+.b-blog__category-trigger, .b-blog__category-trigger:visited {
+    text-decoration: none;
+    color: #00c67a;
+}

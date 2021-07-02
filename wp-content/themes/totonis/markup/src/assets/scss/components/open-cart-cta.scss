@@ -1,0 +1,20 @@
+.b-oc-cta{
+  @include section-inner-offset;
+}
+.b-oc-cta__inner{}
+.b-oc-cta__title{
+  text-align: center;
+  margin-bottom: #{$offset * 2};
+}
+.b-oc-cta__buttons{
+  @include row;
+  @include flex-center;
+}
+.b-oc-cta__button{
+  margin: #{$offset};
+  padding-left: #{$offset};
+  padding-right: #{$offset};
+  @include sm{
+    margin: #{$offset / 2};
+  }
+}

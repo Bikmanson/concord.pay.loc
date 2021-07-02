@@ -1,0 +1,73 @@
+strong {
+    font-weight: 900;
+}
+
+textarea {
+    resize: vertical;
+}
+
+a:active {
+    color: unset;
+}
+
+a:visited {
+    color: unset;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: $font;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    @include title-h1;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    @include title-h2;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    @include title-h3;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h4 {
+    @include title-h4;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h5 {
+    @include title-h5;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h6 {
+    @include title-h6;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}

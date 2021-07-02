@@ -1,0 +1,20 @@
+.b-industry-cover{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  @include flex-row;
+  @include flex-center;
+}
+.b-industry-cover__inner{
+  min-width: 1920px;
+  min-height: 480px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include lg{
+    min-width: 150%;
+    min-height: 0;
+    padding-bottom: 31.25%;
+  }
+}

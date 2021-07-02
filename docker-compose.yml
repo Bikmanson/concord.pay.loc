@@ -1,0 +1,32 @@
+version: '3.3'
+services:
+  concord-nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/dev/nginx/config:/etc/nginx/conf.d
+      - ./docker/dev/nginx/logs:/var/log/nginx
+      - ./:/app
+    depends_on:
+        - concord-php
+  concord-mysql:
+    image: mysql:5.7.16
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_DATABASE: "concord"
+    volumes:
+      - ./docker/dev/mysql/data/:/usr/local/mysql/data
+      - ./docker/dev/mysql/dump/concord.sql:/home/concord.sql
+  concord-php:
+    build: docker/dev/php
+    volumes:
+      - .:/app
+      - ./docker/dev/php/php.ini:/usr/local/etc/php/php.ini
+    environment:
+      XDEBUG_CONFIG: "remote_host=host.docker.internal remote_enable=1"
+      PHP_IDE_CONFIG: "serverName=Docker"
+    depends_on:
+      - concord-mysql

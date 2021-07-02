@@ -1,0 +1,25 @@
+.b-gp-cms{
+  @include section-inner-offset
+}
+.b-gp-cms__inner{}
+.b-gp-cms__title{
+  margin-bottom: #{$offset * 2};
+  text-align: center;
+}
+.b-gp-cms__list{
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: #{$offset * 4}
+}
+.b-gp-cms__row{}
+.b-gp-cms__col{
+  @include flex-row();
+  @include flex-center;
+  text-decoration: none;
+  @include hover{
+    opacity: 0.6;
+  }
+}
+.b-gp-cms__gray-box{
+}

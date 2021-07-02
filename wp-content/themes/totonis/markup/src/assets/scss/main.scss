@@ -1,0 +1,30 @@
+@import "../lib/normalize.css";
+
+@import "_fonts";
+@import "_var";
+@import "_mixins.scss";
+@import "_tags";
+@import "_glob-modifiers";
+@import "main/**/*.scss";
+@import "simple/**/*.scss";
+@import "components/**/*.scss";
+@media (hover: hover) {
+     ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        background: map-get($colors, 'white');
+    }
+     ::-webkit-scrollbar-thumb {
+        background: map-get($colors, 'blue');
+       border-radius: $radius-xs;
+    }
+}
+
+::selection {
+    background-color: map-get($colors, 'blue');
+    color: map-get($colors, 'light');
+}
+
+body.hidden{
+  overflow: hidden;
+}

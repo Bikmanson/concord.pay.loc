@@ -1,0 +1,69 @@
+.b-border-card{
+  border-width: 1px;
+  border-style: solid;
+  border-radius: $radius-xs;
+  height: 100%;
+  @include flex-row;
+  @include flex-center;
+}
+.b-border-card__inner{
+  padding: #{$offset * 2};
+  @include xs{
+    padding: #{$offset};
+  }
+  & > *{
+    &:not(:last-child){
+      margin-bottom: #{$offset};
+    }
+  }
+}
+.b-border-card__icons{
+}
+.b-border-card__icons-row{
+  @include row;
+  @include flex-center;
+}
+.b-border-card__icon{
+  padding: #{$offset};
+  @include  sm{
+    padding: #{$offset / 2};
+  }
+  & svg{
+    display: block;
+  }
+}
+.b-border-card__title{
+  font-weight: 700;
+}
+.b-border-card__description{
+  @include inner-content-style;
+  &:not(:last-child){
+    margin-bottom: #{$offset * 2};
+    @include sm{
+      margin-bottom: #{$offset};
+    }
+  }
+}
+.b-border-card__logos{
+  @include row;
+  justify-content: center;
+}
+.b-border-card__logo{
+  padding: #{$offset};
+  display: inline-flex;
+  @include flex-center();
+  & img{
+    display: block;
+  }
+  @include xs{
+    width: 100%;
+  }
+}
+.b-border-card__description ol{
+  padding-left: #{$offset};
+  list-style: decimal !important;
+  & li{
+    padding-left: #{$offset * 0.75};
+    list-style: decimal !important;
+  }
+}

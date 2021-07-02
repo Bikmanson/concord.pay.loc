@@ -1,0 +1,66 @@
+.b-content{
+  @include text-sm;
+  & > *{
+    @include inh;
+    &:not(:last-child){
+      margin-bottom: #{$offset};
+    }
+  }
+  & ol{
+    padding-left: 15px;
+    & li{
+      padding-left: 10px;
+      &:not(:last-child){
+        margin-bottom: #{$offset};
+      }
+    }
+  }
+  & ul{
+    padding-left: 15px;
+    & li{
+      &::marker{
+        font-size: 9px;
+      }
+    }
+  }
+
+  & h3{
+    @include title-h3;
+    font-weight: 700;
+  }
+  & h4{
+    @include title-h4;
+    font-weight: 700;
+  }
+  & h5{
+    @include title-h5;
+    font-weight: 700;
+  }
+}
+
+.b-content table{
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.b-content table tr{
+  &:first-child{
+    background-color: map-get($colors, 'light');
+  }
+}
+.b-content table th{
+  @include text-sm;
+  font-weight: 400;
+  padding: #{$offset / 2};
+  border: 1px solid map-get($colors, 'blue');
+}
+.b-content table td{
+  @include text-sm;
+  font-weight: 400;
+  padding: #{$offset / 2};
+  border: 1px solid map-get($colors, 'blue');
+//
+  &:first-child{
+    font-weight: 700;
+  }
+}

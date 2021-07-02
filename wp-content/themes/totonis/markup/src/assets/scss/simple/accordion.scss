@@ -1,0 +1,33 @@
+.b-accordion{}
+.b-accordion__list{}
+.b-accordion__item{
+  &:not(:first-child){
+    & .b-accordion__item-trigger{
+      border-top: 1px solid map-get($colors, 'blue');
+    }
+  }
+}
+.b-accordion__item-trigger{
+  color: map-get($colors, 'blue');
+  width: 100%;
+  height: 42px;
+  font-weight: 700;
+  display: inline-flex;
+  position: relative;
+  user-select: none;
+  @include flex-center();
+  &:not(.active){
+    color: rgba(map-get($colors, 'blue'), 0.7);
+  }
+}
+.b-accordion__item-content{
+  display: none;
+  &.active{
+    display: block;
+    animation: tabContent 0.25s linear forwards;
+    border: 1px solid map-get($colors, 'blue');
+    background-color: map-get($colors, 'light');
+    padding: #{$offset * 2} #{$offset};
+    margin-bottom: -1px;
+  }
+}

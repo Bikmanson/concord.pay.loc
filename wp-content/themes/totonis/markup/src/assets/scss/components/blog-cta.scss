@@ -1,0 +1,12 @@
+.b-blog-cta{
+  @include section-inner-offset;
+}
+.b-blog-cta__inner{}
+.b-blog-cta__row{}
+.b-blog-cta__col{}
+.b-blog-cta__title{}
+.b-blog-cta__button{
+  @include xs{
+    width: 100%;
+  }
+}

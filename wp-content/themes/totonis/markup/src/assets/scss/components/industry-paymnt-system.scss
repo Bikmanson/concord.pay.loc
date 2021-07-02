@@ -1,0 +1,46 @@
+.b-industry-payment-system{
+  @include section-inner-offset;
+}
+.b-industry-payment-system__title{
+  text-align: center;
+  &:not(:last-child){
+    margin-bottom: #{$offset * 2};
+    @include sm{
+      margin-bottom: #{$offset * 1.5};
+    }
+  }
+  @include xs{
+    text-align: left;
+  }
+}
+.b-industry-payment-system__description{
+  text-align: center;
+  &:not(:last-child){
+    margin-bottom: #{$offset * 2};
+    @include sm{
+      margin-bottom: #{$offset * 1.5};
+    }
+  }
+  @include xs{
+    text-align: left;
+  }
+}
+.b-industry-payment-system__buttons{
+  @include flex-row;
+  @include flex-center;
+  width: calc(100% + #{$offset});
+  margin: #{$offset / -2};
+
+  &:not(:last-child){
+    margin-bottom: #{$offset * 2};
+    @include sm{
+      margin-bottom: #{$offset * 1.5};
+    }
+  }
+}
+.b-industry-payment-system__button{
+  margin: #{$offset / 2};
+  @include xs{
+    width: 100%;
+  }
+}

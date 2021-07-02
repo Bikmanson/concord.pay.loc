@@ -1,0 +1,20 @@
+.b-oc-payment-ways{
+  @include section-inner-offset;
+}
+.b-oc-payment-ways__inner{}
+.b-oc-payment-ways__title{
+  text-align: center;
+  margin-bottom: #{$offset * 2};
+}
+.b-oc-payment-ways__description{
+  text-align: center;
+  @include inner-content-style;
+  &:not(:last-child){
+    margin-bottom: #{$offset * 3};
+  }
+}
+.b-oc-payment-ways__list{
+  margin-bottom: #{$offset * 3};
+}
+.b-oc-payment-ways__row{}
+.b-oc-payment-ways__col{}

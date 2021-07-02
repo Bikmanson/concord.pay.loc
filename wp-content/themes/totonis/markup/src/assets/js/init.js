@@ -1,0 +1,10 @@
+document.addEventListener('DOMContentLoaded', e => {
+    new Sliders()
+    new GroupSlider()
+    new Modals()
+    new Tab()
+    new Accordion()
+    new StickyHeader()
+    new MobileMenu()
+    new MobileMenuDropdown()
+})

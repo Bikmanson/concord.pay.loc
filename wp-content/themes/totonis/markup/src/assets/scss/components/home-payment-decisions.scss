@@ -1,0 +1,33 @@
+.b-payment-decisions {
+  @include section-inner-offset;
+}
+
+.b-payment-decisions__inner {
+}
+
+.b-payment-decisions__title {
+  text-align: center;
+  margin-bottom: #{$offset * 4};
+}
+.b-payment-decisions__list{
+  @include xs{
+    display: none;
+  }
+}
+.b-payment-decisions__slider{
+  display: none;
+  @include xs{
+    display: block;
+    width: 100vw;
+    margin-left: calc((100vw - #{$container-xs} + #{$offset * 2}) / -2);
+  }
+  @media (max-width: #{$container-xs}) {
+    margin-left: #{$offset * -1};
+  }
+}
+
+.b-payment-decisions__col{
+  @include sm{
+    margin-bottom: #{$offset};
+  }
+}

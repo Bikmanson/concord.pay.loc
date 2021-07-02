@@ -1,0 +1,86 @@
+.b-comfort-connect{
+  @include section-inner-offset;
+}
+.b-comfort-connect__inner{}
+.b-comfort-connect__row{}
+.b-comfort-connect__col{}
+.b-comfort-connect__title{
+  margin-bottom: #{$offset * 2};
+  @include sm{
+    text-align: center;
+  }
+}
+.b-comfort-connect__description{
+  max-width: 500px;
+  margin-bottom: #{$offset * 3};
+  @include sm{
+    text-align: center;
+  }
+  & p{
+    @include inh;
+    margin-top: 0;
+    margin-bottom: 0;
+    &:not(:last-child){
+      margin-bottom: #{$offset};
+    }
+  }
+}
+.b-comfort-connect__content-block{
+  @include sm{
+    text-align: center;
+  }
+  &:not(:last-child){
+    margin-bottom: #{$offset * 2};
+  }
+}
+.b-comfort-connect__content-block-title{
+  margin-bottom: #{$offset};
+}
+.b-comfort-connect__content-block-text{
+  & p{
+    @include inh;
+    margin-top: 0;
+    margin-bottom: 0;
+    &:not(:last-child){
+      margin-bottom: #{$offset};
+    }
+    & a {
+      color: map-get($colors, 'green');
+      text-decoration: none;
+      @include hover{
+        opacity: 0.75;
+        text-decoration: underline;
+      }
+    }
+    & strong{
+      font-weight: 700;
+    }
+  }
+}
+.b-comfort-connect__logos-list{
+  @include  flex-row;
+  width: calc(100% + #{$offset * 1.5});
+  margin: #{$offset * -3 / 4};
+  margin-bottom: #{$offset * 1.5};
+  @include sm{
+    justify-content: center;
+  }
+}
+.b-comfort-connect__logos-item{
+  width: 25%;
+  display: block;
+  text-decoration: none;
+  padding: #{$offset * 3 / 4};
+  @include  md{
+    width: calc(100% / 3);
+  }
+  @include sm{
+    text-align: center;
+  }
+  @include xs{
+    width: 50%;
+  }
+  @include hover{
+    opacity: 0.6;
+  }
+}

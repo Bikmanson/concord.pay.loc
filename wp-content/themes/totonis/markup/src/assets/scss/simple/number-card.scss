@@ -1,0 +1,46 @@
+.b-number-card{
+  width: 100%;
+}
+.b-number-card__inner{}
+.b-number-card__header{
+  margin-bottom: #{$offset * 2};
+  @include md{
+    margin-bottom: #{$offset * 1.5};
+  }
+  @include sm{
+    margin-bottom: #{$offset};
+  }
+  @include xs{
+    margin-bottom: #{$offset * 0.75};
+  }
+}
+.b-number-card__counter{
+  width: 80px;
+  height: 80px;
+  @include flex-row();
+  @include flex-center();
+  margin: 0 auto;
+  border: 1px solid map-get($colors, 'green');
+  border-radius: $radius-round;
+  font-size: 48px;
+  line-height: 1;
+  color: map-get($colors, 'green');
+  font-weight: 100;
+  @include md{
+    width: 66px;
+    height: 66px;
+    font-size: 40px;
+  }
+  @include sm{
+    width: 52px;
+    height: 52px;
+    font-size: 32px;
+  }
+  @include xs{
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+.b-number-card__main{}
+.b-number-card__description{}

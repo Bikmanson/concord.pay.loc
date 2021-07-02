@@ -1,0 +1,45 @@
+.b-gp-cover {
+  @include section-inner-offset;
+}
+
+.b-gp-cover__inner {
+}
+
+.b-gp-cover__row {
+  margin: #{$offset * -1.5};
+  width: calc(100% + #{$offset * 3});
+}
+
+.b-gp-cover__col {
+  padding: #{$offset * 1.5};
+}
+
+.b-gp-cover__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  max-width: 164px;
+  width: 100%;
+  margin-bottom: #{$offset * 1.5};
+
+  & img {
+    width: 100%;
+    display: block;
+  }
+}
+
+a.b-gp-cover__logo {
+  @include hover {
+    opacity: 0.75;
+  }
+}
+
+.b-gp-cover__description {
+  @include inner-content-style;
+  margin-bottom: #{$offset * 2};
+  max-width: 510px;
+  @include sm {
+    margin-bottom: 0;
+  }
+}

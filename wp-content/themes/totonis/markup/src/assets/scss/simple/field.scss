@@ -1,0 +1,25 @@
+.b-field{
+  width: 100%;
+}
+.b-field__input{
+  width: 100%;
+  display: block;
+  padding: #{$offset / 4 * 3} #{$offset};
+  @include text-sm;
+  &::placeholder{
+    color: #A2A2A2;
+  }
+  color: map-get($colors, 'dark');
+  border-radius: $radius-xs;
+  border-width: 1px;
+  border-style: solid;
+  transition: $t;
+}
+.b-field_gray{
+  background-color: #f6f6f6;
+  border-color: #f6f6f6;
+  &:focus{
+    background-color: map-get($colors, 'light');
+    border-color: map-get($colors, 'blue');
+  }
+}

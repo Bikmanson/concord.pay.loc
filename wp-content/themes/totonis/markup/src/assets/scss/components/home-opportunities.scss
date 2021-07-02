@@ -1,0 +1,30 @@
+.b-opportunities{
+@include section-inner-offset;
+}
+.b-opportunities__inner{}
+.b-opportunities__title{
+  margin-bottom: #{$offset * 2};
+}
+.b-opportunities__list{
+  @include xs{
+    display: none;
+  }
+}
+.b-opportunities__row{
+  margin: #{$offset * -1.5};
+  width: calc(100% +  #{$offset * 3});
+}
+.b-opportunities__col{
+  padding: #{$offset * 1.5};
+}
+.b-opportunities__slider{
+  display: none;
+  @include xs{
+    display: block;
+    width: 100vw;
+    margin-left: calc((100vw - #{$container-xs} + #{$offset * 2}) / -2);
+  }
+  @media (max-width: #{$container-xs}) {
+    margin-left: #{$offset * -1};
+  }
+}

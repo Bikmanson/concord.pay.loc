@@ -1,0 +1,36 @@
+.b-article-recommend {
+  @include section-inner-offset;
+}
+
+.b-article-recommend__inner {
+}
+
+.b-article-recommend__title {
+  margin-bottom: #{$offset};
+}
+
+.b-article-recommend__list {
+  & .b-col {
+    padding: #{$offset} #{$offset / 2};
+  }
+
+  &:not(:last-child) {
+    margin-bottom: #{$offset * 2};
+  }
+
+  @include xs {
+    display: none;
+  }
+}
+
+.b-article-recommend__slider {
+  display: none;
+  @include xs {
+    display: block;
+    width: 100vw;
+    margin-left: calc((100vw - 420px + 40px) / -2);
+  }
+  @media (max-width: 420px) {
+    margin-left: #{$offset * -1};
+  }
+}
