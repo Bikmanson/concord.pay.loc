@@ -19,7 +19,7 @@ services:
       MYSQL_DATABASE: "concord"
     volumes:
       - ./docker/dev/mysql/data/:/usr/local/mysql/data
-      - ./docker/dev/mysql/dump/concord.sql:/home/concord.sql
+      - ./docker/dev/mysql/dump/:/home/
   concord-php:
     build: docker/dev/php
     volumes:
